@@ -5,17 +5,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
+import {MatIconModule} from '@angular/material/icon';
+import { BodyComponent } from './body/body.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MinhasAvaliacoesComponent } from './minhas-avaliacoes/minhas-avaliacoes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    BodyComponent,
+    MinhasAvaliacoesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
