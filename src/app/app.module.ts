@@ -9,6 +9,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { BodyComponent } from './body/body.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MinhasAvaliacoesComponent } from './minhas-avaliacoes/minhas-avaliacoes.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,10 @@ import { MinhasAvaliacoesComponent } from './minhas-avaliacoes/minhas-avaliacoes
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
-    MatSidenavModule
+    MatSidenavModule,
+    HttpClientModule
+    
+
   ],
   providers: [],
   bootstrap: [AppComponent]
