@@ -1,3 +1,4 @@
+import { MatTableModule } from '@angular/material/table';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatToolbarModule } from '@angular/material/toolbar'
@@ -10,6 +11,10 @@ import { BodyComponent } from './body/body.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MinhasAvaliacoesComponent } from './minhas-avaliacoes/minhas-avaliacoes.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatCardModule} from '@angular/material/card';
+import { VerFilmeComponent } from './components/ver-filme/ver-filme.component';
+
 
 
 @NgModule({
@@ -17,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     HeaderComponent,
     BodyComponent,
-    MinhasAvaliacoesComponent
+    MinhasAvaliacoesComponent,
+    VerFilmeComponent
   ],
   imports: [
     BrowserModule,
@@ -26,11 +32,17 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule,
+    AppRoutingModule,
+    MatPaginatorModule,
+    MatCardModule
+    
     
 
   ],
   providers: [],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }

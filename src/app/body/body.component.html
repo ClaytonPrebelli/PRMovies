@@ -1,3 +1,8 @@
-<table>
-  teste
-</table>
+<div class="corpo_cards" >
+<mat-card *ngFor="let dados of organiza" class="card mat-elevation-z4">
+   <mat-card-title >{{dados.title}}</mat-card-title>
+   <mat-card-title ><h4 class="titulo_otiginal"><i>"{{dados.original_title}}"</i></h4></mat-card-title>
+<a class="link_capa" routerLink="ver_filme/{{dados.id}}"><img mat-card-image src="https://image.tmdb.org/t/p/w500{{dados.backdrop_path}}" class="capa"></a>
+<mat-card-content class="votos"><h3><mat-icon class="ico" >star</mat-icon>{{dados.vote_average}}</h3></mat-card-content>
+</mat-card>
+</div>
