@@ -41,7 +41,7 @@ export class BodyComponent implements OnInit {
         }
         return 0;
       });
-      console.log(this.organiza)
+      
      })
     }else{
   this.filmesGeralService.verifica_storage().forEach(guest_session=>{
@@ -49,7 +49,6 @@ export class BodyComponent implements OnInit {
     let guest = this.guest_session.guest_session_id
     localStorage.setItem('id',guest)
    this.organiza =  this.organiza.sort((a,b)=> a.vote_average - b.vote_average)
-    console.log(this.organiza)
   })
  
 } 

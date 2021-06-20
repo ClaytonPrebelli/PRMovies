@@ -12,3 +12,10 @@ export interface Lista_organizada{
      backdrop_path:any
      title:any
 }
+export interface Generos{
+     id:number,
+     name:string
+}
+export interface Nota{
+     nota:any
+}

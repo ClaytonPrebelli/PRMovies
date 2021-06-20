@@ -12,7 +12,7 @@ const routes: Routes = [
   component: MinhasAvaliacoesComponent
 },
 {
-    path:"ver_filme/:_id",
+    path:"ver_filme/:id",
     component: VerFilmeComponent
   }
 ];

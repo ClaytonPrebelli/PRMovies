@@ -1,1 +1,51 @@
-<p>ver-filme works!</p>
+<div class="corpo_cards_geral" >
+    <mat-card class="card mat-elevation-z4">
+        <div>
+       <mat-card-title >{{organiza.title}}</mat-card-title>
+       <mat-card-subtitle ><h4 class="titulo_otiginal"><i>"{{organiza.original_title}}"</i></h4></mat-card-subtitle></div>
+       <div class="infos">
+             <img src="https://image.tmdb.org/t/p/w500{{organiza.backdrop_path}}">
+            
+            <div class="ficha">
+                <h3 class="label">Sinopse: </h3> <p class="informacao">{{organiza.overview}}</p>
+                <div class="agrupa">
+                    <div class="separados">
+                    <h3 class="label">Gêneros </h3> <p *ngFor="let generos of this.generos" class="informacao"><mat-icon class="ico" >bookmark</mat-icon>{{generos.name}}</p>
+                    </div>
+                    <div class="separados">
+                        <h3 class="label">Lançamento </h3> <p class="informacao"><mat-icon class="ico" >event</mat-icon>{{organiza.release_date | date:"dd/MM/YYYY"}}</p>
+                    </div>
+                    <div class="separados">
+                        <h3 class="label">Nota </h3> <p class="informacao"><mat-icon class="ico star" >star</mat-icon>{{organiza.vote_average}}</p>
+                    </div>
+                    <div class="separados">
+                        <h3 class="label">Votos </h3> <p class="informacao"><mat-icon class="ico" >assessment</mat-icon>{{organiza.vote_count}}</p>
+                    </div>
+                    <div class="separados">
+                        <h3 class="label">Popularidade </h3> <p class="informacao"><mat-icon class="ico coracao" >favorite</mat-icon>{{organiza.popularity}}</p>
+                    </div>
+                    <div class="separados">
+                        <h3 class="label">Idioma </h3> <p class="informacao idioma"><mat-icon class="ico" >language</mat-icon>{{organiza.original_language}}</p>
+                    </div>
+                </div>
+                <div class="rodape_filme">
+                    <div class="voto">
+                        <h3 class="label">Avalie esse filme</h3>
+                        <form class="example-form">
+                            <mat-form-field class="">
+                              <mat-label>Nota</mat-label>
+                              <input matInput type="number" max="10" min="0" step=".5" name="vote" (ngModel)="nota.nota">
+                            </mat-form-field>
+                        </form>
+                        <button mat-raised-button color="primary" class="botao" ><mat-icon class="ico star" >star</mat-icon>Enviar Voto</button>
+                    </div>
+                    <div class="voltar">teste
+                    
+                    </div>
+                </div>    
+            </div>
+
+        </div>
+    
+    </mat-card>
+    </div>
