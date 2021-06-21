@@ -1,5 +1,5 @@
 import { MatTableModule } from '@angular/material/table';
-import { NgModule, NgModuleDecorator } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { AppComponent } from './app.component';
@@ -9,15 +9,15 @@ import {MatIconModule} from '@angular/material/icon';
 import { BodyComponent } from './body/body.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MinhasAvaliacoesComponent } from './minhas-avaliacoes/minhas-avaliacoes.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatCardModule} from '@angular/material/card';
 import { VerFilmeComponent } from './components/ver-filme/ver-filme.component';
 import { AppRoutingModule } from './app-routing.module';
 import {MatSliderModule} from '@angular/material/slider';
-import { SliderComponent } from './components/slider/slider.component';
 import {MatInputModule} from '@angular/material/input';
-
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -27,12 +27,12 @@ import {MatInputModule} from '@angular/material/input';
     HeaderComponent,
     BodyComponent,
     MinhasAvaliacoesComponent,
-    VerFilmeComponent,
-    SliderComponent
+    VerFilmeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
@@ -43,7 +43,10 @@ import {MatInputModule} from '@angular/material/input';
     MatPaginatorModule,
     MatCardModule,
     MatSliderModule,
-    MatInputModule 
+    MatInputModule,
+    MatSnackBarModule
+    
+    
     
 
   ],

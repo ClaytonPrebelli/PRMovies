@@ -17,5 +17,5 @@ export interface Generos{
      name:string
 }
 export interface Nota{
-     nota:any
+     value:number
 }

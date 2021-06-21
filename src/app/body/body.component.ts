@@ -48,7 +48,21 @@ export class BodyComponent implements OnInit {
     this.guest_session = guest_session
     let guest = this.guest_session.guest_session_id
     localStorage.setItem('id',guest)
-   this.organiza =  this.organiza.sort((a,b)=> a.vote_average - b.vote_average)
+    this.filmesGeralService.lista_filmes().subscribe(filmes=>{
+      this.lista_filmes = filmes.results //transferido a lista_filmes devido ao formato de resposta (results:{...})
+     this.organiza = this.lista_filmes; // transfere a um array sem interface para fazer sort
+     //classifica pelo vote_average
+    this.organiza.sort(function (a, b) {
+      if (a.vote_average > b.vote_average) {
+        return -1;
+      }
+      if (a.vote_average < b.vote_average) {
+        return 1;
+      }
+      return 0;
+    });
+    
+   })
   })
  
 } 

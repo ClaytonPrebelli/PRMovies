@@ -34,13 +34,13 @@
                         <form class="example-form">
                             <mat-form-field class="">
                               <mat-label>Nota</mat-label>
-                              <input matInput type="number" max="10" min="0" step=".5" name="vote" (ngModel)="nota.nota">
+                              <input matInput type="number" max="10" min="0.5" step=".5" name="nota.value" [(ngModel)]="nota.value" >
                             </mat-form-field>
                         </form>
-                        <button mat-raised-button color="primary" class="botao" ><mat-icon class="ico star" >star</mat-icon>Enviar Voto</button>
+                        <button mat-raised-button color="primary" class="botao" (click)="envia_voto()"><mat-icon class="ico star" >star</mat-icon>Enviar Voto</button>
                     </div>
-                    <div class="voltar">teste
-                    
+                    <div class="voltar">
+                        <button mat-raised-button color="primary" class="botao" ><mat-icon class="ico" routerLink="/" >undo</mat-icon>Voltar</button>
                     </div>
                 </div>    
             </div>

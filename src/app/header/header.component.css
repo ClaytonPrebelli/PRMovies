@@ -27,4 +27,12 @@
     display:flex;
     
 }
+@media screen and (max-width:760px){
+  .titulo{
+    font-size: 0.8rem;
+  }
+  .txt_bt{
+    display: none;
+  }
+}
 

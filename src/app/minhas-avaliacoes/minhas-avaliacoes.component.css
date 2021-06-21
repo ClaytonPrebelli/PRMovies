@@ -1,0 +1,80 @@
+.corpo_cards{
+    max-width:100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    margin: 5px auto;
+}
+.card{
+    width: 30%; 
+    margin-bottom: 5px;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.titulo_original{
+    font-style: italic;
+   
+}
+.votos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle; 
+    margin: -15px auto -15px auto;
+}
+.ico{
+    
+    vertical-align:text-bottom;
+    margin-right: 2px;
+}
+.coracao{
+    color:rgb(238, 5, 5);
+    text-shadow:1px 1px 2px black;
+}
+.star{
+    color:goldenrod;
+    text-shadow:1px 1px 2px black;
+}
+.votos h3{
+    vertical-align: middle;
+    font-weight: 600;
+}
+.link_capa{
+    cursor:pointer;
+}
+.capa:hover{
+    mix-blend-mode:luminosity;
+    transform:scale(1.05);
+    
+}
+.botao{
+    background-color: #661EE3;
+    border-radius: 10px;
+    padding-right: 10px;
+    border:none;
+    box-shadow: 2px 3px 8px 2px rgba(0, 0, 0, 0.651);
+    color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    cursor:pointer;
+    transition: 0.5s ease;
+    text-align: center;
+    justify-self: center;
+}
+.botao:hover{
+    box-shadow: 1px 1px 2px 2px rgba(182, 181, 181, 0.651);
+}
+@media screen and (max-width:760px){
+    .card{
+        width: 90%;
+    }
+}
