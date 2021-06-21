@@ -1,28 +1,30 @@
 # Prmovies
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.4.
+Projeto criado para teste de vaga Front-end.
+Trata-se de consumo de uma API do TheMovieDatabase, porém, pelas suas funcionalidades, é algo usual, onde o usuário pode verificar novos filmes em cartaz e avaliar (mesmo sem estar logado no portal da API) seus filmes, além de ter uma lista com suas avaliações.
+A aplicação foi construida em Angular com material design e material icons.
+As requisiçoes da aplicação são feitas a partir de protocolos http (GET,POST,DELETE) com o HTTPModule.
+A sessão de visitante é salva em localstorage, podendo assim, guardar dados por mais tempo.
+Dei o nome de PRMovies devido a sua usabilidade (public rate movies - avaliação de filmes publica).
+A aplicação pode ser vista operacional no link [PRMovies](https://prebelli.online/prmovies), onde já foi feito o deploy da mesma em meu ambiente próprio.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Conteúdo do Repositório
 
-## Code scaffolding
+Além dos arquivos originais (components, services, models, typescript, html, css, json etc), inseri neste repositório os arquivos da build (dist) caso haja interesse em verificar os mesmos.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Utilização
 
-## Build
+Na tela principal, pode-se ver a lista com os filmes em cartaz no momento e, como é consumida diretamente da API, exibindo e renderizando os mesmos em tempo real, sempre está atualizada.
+A exibição é ordenada por ordem de votos, ou seja, primeiro aparecerão os filmes mais bem classificados pelos usuários.
+Nos cards iniciais, é possível ver somente o título, o título original (logo abaixo para os amantes de cinema que assim o prefiram), o poster do filme e sua avaliação média.
+Ao clicar no poster, abre-se os demais detalhes do filme, podendo ler descrições como sinopse, genero, data de lançamento (já tabulada para nosso formato brasileiro), avaliação média, popularidade do filme e idioma original
+Na mesma tela de descrições, encontra-se um campo para inserir a sua avaliação, manualmente ou clicando com as setas acima e abaixo do formulario, já configurado para escalar de 0.5 pontos por vez, com mínimo de 0.5 e máximo de 10.
+O botão voltar se encontra na mesma tela.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Avaliando
 
-## Running unit tests
+Ao avaliar um filme, aparecerá uma mensagem que a avaliação foi concluída e retornará a área principal com todos os filmes em cartaz.
+No botão da barra superior "Minhas Avaliações", encontram-se todos os filmes já avaliados pelo usuário, podendo o mesmo retirar sua avaliação, caso assim prefira.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-"# prmovies" 
